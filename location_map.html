@@ -1,0 +1,26 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>Display Location on Google Maps</title>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfqcWI4g6UOSe0DhPRPvwNM5086dZHkE8"></script>
+        <script>
+          function initMap() {
+            var location = { lat: 27.497078972222223, lng: 95.33487099999999 };
+            var map = new google.maps.Map(document.getElementById("map"), {
+              zoom: 15,
+              center: location,
+            });
+            var marker = new google.maps.Marker({
+              position: location,
+              map: map,
+            });
+          }
+        </script>
+      </head>
+      <body onload="initMap()">
+        <h1>Location from Image</h1>
+        <div id="map" style="height: 500px; width: 100%;"></div>
+      </body>
+    </html>
+    
